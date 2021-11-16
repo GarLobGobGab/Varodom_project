@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="agv6_varo">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0976887110638127 1.77635683940025E-15 -0.157720206093335"
+        rpy="0 0 0" />
+      <mass
+        value="14.1869508369142" />
+      <inertia
+        ixx="0.588462273329024"
+        ixy="-1.04590253472189E-08"
+        ixz="0.0697327503182638"
+        iyy="1.47677539724383"
+        iyz="9.62796658784312E-10"
+        izz="1.79873438535669" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv6_varo/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv6_varo/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Left_Link">
+    <inertial>
+      <origin
+        xyz="0 -0.016602338839462 -1.66533453693773E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.52936994072617" />
+      <inertia
+        ixx="0.000772904303756457"
+        ixy="-8.70667323830793E-20"
+        ixz="-3.67109231972611E-34"
+        iyy="0.0013878620871552"
+        iyz="6.44417065836E-18"
+        izz="0.000772904303756456" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv6_varo/meshes/Left_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv6_varo/meshes/Left_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left_Joint"
+    type="continuous">
+    <origin
+      xyz="0.110000000000006 0.229999999999991 -0.239999999999994"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Left_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Right_Link">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-16 0.016602338839462 -4.49640324973188E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.529369940726169" />
+      <inertia
+        ixx="0.000772904303756456"
+        ixy="8.70716048896513E-20"
+        ixz="1.91778702835882E-34"
+        iyy="0.0013878620871552"
+        iyz="2.16984719145409E-18"
+        izz="0.000772904303756456" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv6_varo/meshes/Right_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv6_varo/meshes/Right_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Right_Joint"
+    type="continuous">
+    <origin
+      xyz="0.110000000000006 -0.230000000000006 -0.239999999999996"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Right_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="LFcon_Link">
+    <inertial>
+      <origin
+        xyz="-0.00121269193407092 0 -0.000415480513364208"
+        rpy="0 0 0" />
+      <mass
+        value="0.0257521038737953" />
+      <inertia
+        ixx="8.61473826778216E-06"
+        ixy="5.74914433529925E-21"
+        ixz="-5.64302073523239E-07"
+        iyy="8.11210346787568E-06"
+        iyz="-2.41003008634718E-21"
+        izz="4.80769500241318E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv6_varo/meshes/LFcon_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv6_varo/meshes/LFcon_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LFcon_Joint"
+    type="continuous">
+    <origin
+      xyz="0.560363870782178 0.190000000000007 -0.244999999999998"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="LFcon_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="LF_Link">
+    <inertial>
+      <origin
+        xyz="0 -0.00649999999999995 -5.55111512312578E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0364111988779923" />
+      <inertia
+        ixx="8.56927811367131E-06"
+        ixy="3.75198100318771E-25"
+        ixz="2.71591299799106E-37"
+        iyy="1.61103246905048E-05"
+        iyz="2.54747297031203E-20"
+        izz="8.56927811367131E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv6_varo/meshes/LF_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv6_varo/meshes/LF_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LF_Joint"
+    type="continuous">
+    <origin
+      xyz="-0.00786387078217188 0.00649999999998607 -0.0400000000000009"
+      rpy="0 0 0" />
+    <parent
+      link="LFcon_Link" />
+    <child
+      link="LF_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="RFcon_Link">
+    <inertial>
+      <origin
+        xyz="-0.00121269193407114 -5.55111512312578E-17 -0.000415480513364208"
+        rpy="0 0 0" />
+      <mass
+        value="0.0257521038737953" />
+      <inertia
+        ixx="8.61473826778217E-06"
+        ixy="5.33540318368168E-21"
+        ixz="-5.6430207352324E-07"
+        iyy="8.11210346787568E-06"
+        iyz="-1.91553632751115E-21"
+        izz="4.80769500241318E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv6_varo/meshes/RFcon_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv6_varo/meshes/RFcon_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RFcon_Joint"
+    type="continuous">
+    <origin
+      xyz="0.560363870782182 -0.189999999999993 -0.244999999999998"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RFcon_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="RF_Link">
+    <inertial>
+      <origin
+        xyz="0 0.00650000000000001 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0364111988779923" />
+      <inertia
+        ixx="8.56927811367131E-06"
+        ixy="1.67531682123137E-26"
+        ixz="1.40097792434919E-38"
+        iyy="1.61103246905048E-05"
+        iyz="2.54747297031203E-20"
+        izz="8.56927811367131E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv6_varo/meshes/RF_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv6_varo/meshes/RF_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RF_Joint"
+    type="continuous">
+    <origin
+      xyz="-0.00786387078217587 -0.00650000000001394 -0.0400000000000023"
+      rpy="0 0 0" />
+    <parent
+      link="RFcon_Link" />
+    <child
+      link="RF_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="LBcon_Link">
+    <inertial>
+      <origin
+        xyz="-0.00121269193407098 0 -0.000415480513364208"
+        rpy="0 0 0" />
+      <mass
+        value="0.0257521038737953" />
+      <inertia
+        ixx="8.6147382677822E-06"
+        ixy="4.01804975449147E-21"
+        ixz="-5.64302073523249E-07"
+        iyy="8.11210346787572E-06"
+        iyz="-1.01632154557052E-20"
+        izz="4.80769500241318E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv6_varo/meshes/LBcon_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv6_varo/meshes/LBcon_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LBcon_Joint"
+    type="continuous">
+    <origin
+      xyz="-0.239636129217822 0.189999999999999 -0.245000000000001"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="LBcon_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="LB_Link">
+    <inertial>
+      <origin
+        xyz="0 -0.00649999999999995 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0364111988779923" />
+      <inertia
+        ixx="8.56927811367131E-06"
+        ixy="-3.41691763893479E-25"
+        ixz="1.40097792434932E-38"
+        iyy="1.61103246905048E-05"
+        iyz="2.54747297031203E-20"
+        izz="8.56927811367131E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv6_varo/meshes/LB_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv6_varo/meshes/LB_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LB_Joint"
+    type="continuous">
+    <origin
+      xyz="-0.00786387078217188 0.00649999999999451 -0.0399999999999985"
+      rpy="0 0 0" />
+    <parent
+      link="LBcon_Link" />
+    <child
+      link="LB_Link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="RBcon_Link">
+    <inertial>
+      <origin
+        xyz="-0.00121269193407103 0 -0.000415480513364208"
+        rpy="0 0 0" />
+      <mass
+        value="0.0257521038737953" />
+      <inertia
+        ixx="8.61473826778216E-06"
+        ixy="3.62531542895807E-21"
+        ixz="-5.64302073523249E-07"
+        iyy="8.11210346787568E-06"
+        iyz="-1.08923608136537E-20"
+        izz="4.80769500241318E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv6_varo/meshes/RBcon_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv6_varo/meshes/RBcon_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RBcon_Joint"
+    type="continuous">
+    <origin
+      xyz="-0.239636129217818 -0.190000000000001 -0.245000000000001"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RBcon_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="RB_Link">
+    <inertial>
+      <origin
+        xyz="0 0.00650000000000001 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0364111988779923" />
+      <inertia
+        ixx="8.56927811367131E-06"
+        ixy="1.67531682123109E-26"
+        ixz="2.71591299799105E-37"
+        iyy="1.61103246905048E-05"
+        iyz="2.54747297031203E-20"
+        izz="8.56927811367131E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv6_varo/meshes/RB_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv6_varo/meshes/RB_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RB_Joint"
+    type="continuous">
+    <origin
+      xyz="-0.00786387078217587 -0.00650000000000545 -0.0399999999999999"
+      rpy="0 0 0" />
+    <parent
+      link="RBcon_Link" />
+    <child
+      link="RB_Link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="Sensor_Link">
+    <inertial>
+      <origin
+        xyz="-0.00254436416091663 -8.32667268468867E-15 -4.9960036108132E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.193830128132172" />
+      <inertia
+        ixx="0.00410299707197696"
+        ixy="-1.44297382400964E-18"
+        ixz="5.47904290451065E-20"
+        iyy="9.85671925445419E-05"
+        iyz="1.62556294831296E-10"
+        izz="0.00400522777358793" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv6_varo/meshes/Sensor_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv6_varo/meshes/Sensor_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Sensor_Joint"
+    type="fixed">
+    <origin
+      xyz="0.625000000000006 0 -0.19"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Sensor_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <gazebo reference="Sensor_Link">
+    <sensor type="ray" name="laser">
+        <pose>0 0 0 0 0 0</pose>
+        <visualize>true</visualize>
+        <update_rate>40</update_rate>
+        <ray>
+            <scan>
+                <horizontal>
+                    <samples>720</samples>
+                    <resolution>1</resolution>
+                    <min_angle>-1.578</min_angle>
+                    <max_angle>1.578</max_angle>
+                </horizontal>
+            </scan>
+            <range>
+                <min>0.1</min>
+                <max>10</max>
+                <resolution>0.1</resolution>
+            </range>
+        </ray>
+        <plugin name="Lidar" filename="libgazebo_ros_laser.so">
+            <topicName>/scan</topicName>
+            <frameName>Sensor_Link</frameName>
+        </plugin>
+    </sensor>
+</gazebo>
+  <gazebo>
+    <plugin name="controller"   filename="libgazebo_ros_diff_drive.so">
+        <leftJoint>Left_Joint</leftJoint>
+        <rightJoint>Right_Joint</rightJoint>
+        <legacyMode>false</legacyMode>
+        <robotBaseFrame>base_link</robotBaseFrame>
+        <wheelSeparation>0.4</wheelSeparation>
+        <wheelDiameter>0.15</wheelDiameter>
+        <publishWheelJointState>true</publishWheelJointState>
+    </plugin>
+    
+</gazebo>
+   <gazebo>
+    <plugin name="joint_state_publisher"
+            filename="libgazebo_ros_joint_state_publisher.so">
+        <jointName>LF_Joint, RF_Joint, LB_Joint, RB_Joint, RFcon_Joint, RBcon_Joint, LFcon_Joint, LBcon_Joint</jointName>
+    </plugin>
+</gazebo>
+</robot>

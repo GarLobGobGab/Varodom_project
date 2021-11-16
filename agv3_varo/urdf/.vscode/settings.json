@@ -2,9 +2,5 @@
     "python.autoComplete.extraPaths": [
         "/home/sp_cyk/golf_robot/devel/lib/python3/dist-packages",
         "/opt/ros/noetic/lib/python3/dist-packages"
-    ],
-    "python.analysis.extraPaths": [
-        "/home/sp_cyk/golf_robot/devel/lib/python3/dist-packages",
-        "/opt/ros/noetic/lib/python3/dist-packages"
     ]
 }

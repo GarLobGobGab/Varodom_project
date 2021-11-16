@@ -362,4 +362,22 @@
     <axis
       xyz="0 -1 0" />
   </joint>
+      <gazebo>
+        <plugin name="explorer_bot_controller"   filename="libgazebo_ros_diff_drive.so">
+            <leftJoint>Left_Joint</leftJoint>
+            <rightJoint>Right_Joint</rightJoint>
+            <legacyMode>false</legacyMode>
+            <robotBaseFrame>base_link</robotBaseFrame>
+            <wheelSeparation>0.4</wheelSeparation>
+            <wheelDiameter>0.15</wheelDiameter>
+            <publishWheelJointState>true</publishWheelJointState>
+        </plugin>
+        
+    </gazebo>
+       <gazebo>
+        <plugin name="joint_state_publisher"
+                filename="libgazebo_ros_joint_state_publisher.so">
+            <jointName>LeftF_Joint, RightF_Joint, LeftB_Joint, LeftB_Joint</jointName>
+        </plugin>
+    </gazebo>
 </robot>
