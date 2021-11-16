@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="agv3_varo">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0976887110638127 1.66533453693773E-15 -0.157720206093335"
+        rpy="0 0 0" />
+      <mass
+        value="14.1869508369143" />
+      <inertia
+        ixx="0.588462273329023"
+        ixy="-1.04590257057843E-08"
+        ixz="0.0697327503182638"
+        iyy="1.47677539724383"
+        iyz="9.62796841937113E-10"
+        izz="1.79873438535669" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv3_varo/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv3_varo/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Left_Link">
+    <inertial>
+      <origin
+        xyz="0 -0.0166023388394619 -1.66533453693773E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.52936994072617" />
+      <inertia
+        ixx="0.000772904303756456"
+        ixy="-5.25167414132725E-20"
+        ixz="-3.59846091570222E-34"
+        iyy="0.0013878620871552"
+        iyz="6.44417065836E-18"
+        izz="0.000772904303756456" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv3_varo/meshes/Left_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv3_varo/meshes/Left_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left_Joint"
+    type="continuous">
+    <origin
+      xyz="0.110000000000006 0.229999999999991 -0.239999999999994"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Left_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Right_Link">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-16 0.016602338839462 -4.49640324973188E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.529369940726169" />
+      <inertia
+        ixx="0.000772904303756456"
+        ixy="5.25216139198445E-20"
+        ixz="9.26339097582768E-35"
+        iyy="0.0013878620871552"
+        iyz="2.16984719145409E-18"
+        izz="0.000772904303756456" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv3_varo/meshes/Right_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv3_varo/meshes/Right_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Right_Joint"
+    type="continuous">
+    <origin
+      xyz="0.110000000000006 -0.230000000000006 -0.239999999999996"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Right_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="LeftF_Link">
+    <inertial>
+      <origin
+        xyz="0 -0.00649999999999995 -5.55111512312578E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0364111988779923" />
+      <inertia
+        ixx="8.56927811367131E-06"
+        ixy="1.67531682131597E-26"
+        ixz="2.43964773290094E-37"
+        iyy="1.61103246905048E-05"
+        iyz="2.54747297031203E-20"
+        izz="8.56927811367131E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv3_varo/meshes/LeftF_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv3_varo/meshes/LeftF_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LeftF_Joint"
+    type="continuous">
+    <origin
+      xyz="0.552500000000007 0.196499999999993 -0.284999999999999"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="LeftF_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="RightF_Link">
+    <inertial>
+      <origin
+        xyz="-2.22044604925031E-16 0.00650000000000001 5.55111512312578E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0364111988779923" />
+      <inertia
+        ixx="8.56927811367131E-06"
+        ixy="1.67531682123477E-26"
+        ixz="-1.67704465085801E-37"
+        iyy="1.61103246905048E-05"
+        iyz="2.54747297031203E-20"
+        izz="8.56927811367131E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv3_varo/meshes/RightF_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv3_varo/meshes/RightF_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightF_Joint"
+    type="continuous">
+    <origin
+      xyz="0.552500000000006 -0.196500000000007 -0.285"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RightF_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="LeftB_Link">
+    <inertial>
+      <origin
+        xyz="0 -0.00649999999999995 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0364111988779923" />
+      <inertia
+        ixx="8.56927811367131E-06"
+        ixy="1.67531682118246E-26"
+        ixz="1.13194085479447E-36"
+        iyy="1.61103246905048E-05"
+        iyz="2.54747297031203E-20"
+        izz="8.56927811367131E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv3_varo/meshes/LeftB_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv3_varo/meshes/LeftB_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LeftB_Joint"
+    type="continuous">
+    <origin
+      xyz="-0.247499999999993 0.196499999999994 -0.284999999999999"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="LeftB_Link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="RightB_Link">
+    <inertial>
+      <origin
+        xyz="0 0.00650000000000001 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0364111988779923" />
+      <inertia
+        ixx="8.56927811367131E-06"
+        ixy="1.67531682123419E-26"
+        ixz="-1.05486914825358E-36"
+        iyy="1.61103246905048E-05"
+        iyz="2.54747297031203E-20"
+        izz="8.56927811367131E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv3_varo/meshes/RightB_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://agv3_varo/meshes/RightB_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightB_Joint"
+    type="continuous">
+    <origin
+      xyz="-0.247499999999994 -0.196500000000006 -0.285000000000001"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RightB_Link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+</robot>
