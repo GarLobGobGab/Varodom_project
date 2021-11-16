@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="init_pos_x" default="0"/>
+    <arg name="init_pos_y" default="0"/>
+    <arg name="init_pos_z" default="0"/>
+    <param name="robot_description" textfile="$(find agvfinal2_varo)/urdf/agvfinal2_varo.urdf" />
+
+    <include file="$(find gazebo_ros)/launch/empty_world.launch"/>
+
+    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"  args="-param robot_description -urdf -model agvfinal2_varo" />
+
+    <node name="Rsp" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>
+
+    <node name="Joint_tester" pkg="rviz" type="rviz" output="screen" args="-d $(find agvfinal2_varo)/config/map.rviz"/>
+
+    <include file="$(find amcl)/examples/amcl_diff.launch"/>
+    <node pkg="move_base" type="move_base" name="Base_move" output="screen">
+        <param name="controller_frequency" value="10.0" />
+        <rosparam file="$(find agvfinal2_varo)/config/costmap_common_params.yaml" command="load" ns="global_costmap"/>
+        <rosparam file="$(find agvfinal2_varo)/config/costmap_common_params.yaml" command="load" ns="local_costmap"/>
+        <rosparam file="$(find agvfinal2_varo)/config/local_costmap_params.yaml" command="load" />
+        <rosparam file="$(find agvfinal2_varo)/config/global_costmap_params.yaml" command="load" />
+        <rosparam file="$(find agvfinal2_varo)/config/trajectory_planner.yaml" command="load" />
+        <rosparam file="$(find agvfinal2_varo)/config/move_base_params.yaml" command="load" />
+      </node>
+
+</launch>
